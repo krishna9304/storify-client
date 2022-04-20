@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
-import { Form, Input, Select, Checkbox, Button, Steps } from "antd";
+import { Form, Input, Checkbox, Button, Steps } from "antd";
 import VerifyIdentity from "./verifyIdentity";
+import { Link } from "react-router-dom";
 
 const { Step } = Steps;
 
@@ -164,6 +165,21 @@ const Signup: FC<SignupProps> = () => {
               );
             case 1:
               return <VerifyIdentity setCurrentStep={setCurrentStep} />;
+            case 2:
+              return (
+                <div className="text-center">
+                  <h1 className="text-xl">You're all set to go!</h1>
+                  <p>
+                    Yay! Go ahead and login with your credentials to enjoy all
+                    the services that we provide.
+                  </p>
+                  <Link to="/login">
+                    <Button type="primary" htmlType="submit">
+                      Login
+                    </Button>
+                  </Link>
+                </div>
+              );
           }
         })()}
       </div>

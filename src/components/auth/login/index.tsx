@@ -1,5 +1,6 @@
 import { Form, Input, Button, Checkbox } from "antd";
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 interface LoginProps {}
 
@@ -51,6 +52,15 @@ const Login: FC<LoginProps> = () => {
           </Button>
         </Form.Item>
       </Form>
+      <hr />
+      <div className="text-center mt-4 font-semibold">
+        <p>
+          or&nbsp;&nbsp;
+          <Link className="underline" to="/signup">
+            Sign Up
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,13 +1,6 @@
 import { FC, useState } from "react";
 import { Menu } from "antd";
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 import { Link } from "react-router-dom";
-
-const { SubMenu } = Menu;
 
 interface TopNavProps {}
 

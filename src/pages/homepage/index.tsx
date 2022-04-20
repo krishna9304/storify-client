@@ -15,7 +15,7 @@ const HomePage: FC<HomePageProps> = () => {
         <TopNav />
       </div>
       <div className="w-full h-5/6 flex justify-center">
-        {pathname.includes("/login") ? <Login /> : <Signup />}
+        {pathname.includes("/signup") ? <Signup /> : <Login />}
       </div>
     </div>
   );
