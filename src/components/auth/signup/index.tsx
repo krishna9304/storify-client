@@ -8,7 +8,7 @@ const { Step } = Steps;
 interface SignupProps {}
 
 const Signup: FC<SignupProps> = () => {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(1);
 
   const onFinish = (values: any) => {
     console.log("Success:", values);
@@ -130,6 +130,9 @@ const Signup: FC<SignupProps> = () => {
                       {
                         required: true,
                         message: "Please input your GST Number!",
+                      },
+                      {
+                        len: 16,
                       },
                     ]}
                   >
